@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  jpa:
+    open-in-view: true
+    show-sql: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.242.130:3306/xc_user?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+rocketmq:
+  name-server: 192.168.242.130:9876
+  producer:
+    group: test
