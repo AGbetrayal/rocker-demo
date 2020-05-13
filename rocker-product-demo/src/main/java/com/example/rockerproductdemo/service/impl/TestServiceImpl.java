@@ -35,6 +35,7 @@ public class TestServiceImpl implements TestService {
         System.out.println("执行本地事务");
         Map<String, Object> map = JSON.parseObject(new String((byte[]) message.getPayload()), Map.class);
         Student student = new Student();
+        student.setId(1);
         student.setName("xxx");
         Student save = studentRepository.save(student);
         RocketMQLocalTransactionState rocketMQLocalTransactionState = StringUtils.isEmpty(save) ? RocketMQLocalTransactionState.ROLLBACK : RocketMQLocalTransactionState.COMMIT;

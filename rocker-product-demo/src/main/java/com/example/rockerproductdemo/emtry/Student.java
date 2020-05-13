@@ -4,23 +4,18 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * @author AGbetrayal
  * @date 2020/5/4 14:50
  */
-@EqualsAndHashCode
-@ToString(exclude = "teachers")
 @Entity
 @Table(name = "t_student")
 @Data
 public class Student {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
 //    @ManyToMany(mappedBy = "students")
