@@ -24,8 +24,8 @@ public class TestController {
 
     @RequestMapping("/test.do")
     public Object test() {
-        template.convertAndSend("test", "测试消息");
-        return "操作成功";
+        // template.convertAndSend("test", "测试消息");
+        return "操作失败";
     }
 
     @RequestMapping("/insert.do")

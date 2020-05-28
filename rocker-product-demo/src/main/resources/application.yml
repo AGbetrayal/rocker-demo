@@ -1,6 +1,15 @@
 server:
   port: 8081
 spring:
+  freemarker:
+    # 关闭缓存
+    cache: false
+    charset: UTF-8
+    request-context-attribute: request
+    template-loader-path: classpath:/templates
+    suffix: .ftl
+  #    content-type: text/html
+
   jpa:
     open-in-view: true
     show-sql: true
