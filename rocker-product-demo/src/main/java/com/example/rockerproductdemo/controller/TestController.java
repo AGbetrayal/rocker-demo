@@ -31,7 +31,7 @@ public class TestController {
     @RequestMapping("/insert.do")
     public Object insert(@RequestParam Map<String,Object> map) {
 
-        testService.sendTransactionMessage(map);
+        // testService.sendTransactionMessage(map);
 
         return "操作成功";
     }
