@@ -24,3 +24,11 @@ rocketmq:
   name-server: 192.168.242.130:9876
   producer:
     group: test
+
+
+jwt:
+  secret: xx
+  expiration: 8
+  tokenHeader: xx
+  tokenHead: xx
+

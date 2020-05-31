@@ -1,8 +1,10 @@
 package com.example.rockerproductdemo.controller;
 
+import com.example.rockerproductdemo.emtry.User;
 import com.example.rockerproductdemo.service.TestService;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,5 +36,21 @@ public class TestController {
         // testService.sendTransactionMessage(map);
 
         return "操作成功";
+    }
+
+    @RequestMapping("/loginSuccess")
+    public Object loginSuccess() {
+//        User principal = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        String username = principal.getUsername();
+
+         return SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+    }
+
+    @RequestMapping("/getUser")
+    public Object getUser() {
+//        User principal = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        String username = principal.getUsername();
+
+        return SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     }
 }
